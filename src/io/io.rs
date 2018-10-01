@@ -2,7 +2,7 @@ use core::cmp::PartialEq;
 use core::ops::{BitAnd, BitOr, Not};
 
 
-pub trait io {
+pub trait Io {
     type Value: Copy + PartialEq + BitAnd<Output = Self::Value> + BitOr<Output = Self::Value> + Not<Output = Self::Value>;
 
     fn read(&self) -> Self::Value;

@@ -1,4 +1,5 @@
 use core::marker::PhantomData;
+use super::io::Io;
 
 #[derive(Copy, Clone)]
 pub struct PortIO<T> {
@@ -9,7 +10,7 @@ pub struct PortIO<T> {
 
 impl<T> PortIO<T> {
     pub const fn new(port: u16) -> Self {
-        Pio::<T> {
+        PortIO::<T> {
             port: port,
             value: PhantomData,
         }
