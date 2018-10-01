@@ -16,7 +16,7 @@ impl<T> PortIO<T> {
     }
 }
 
-impl Io for Pio<u8> {
+impl Io for PortIO<u8> {
     type Value = u8;
 
     // reads a single byte from IO port
